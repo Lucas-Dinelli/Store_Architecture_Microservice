@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 eureka:
   instance: 
     hostname: localhost
@@ -19,10 +22,10 @@ spring:
           lower-case-service-id: true
       routes:
         - id: product-catalog
-          uri: lb://PRODUCT-CATALOG
+          uri: lb://product-catalog
           predicates:
             - Path=/product/**
         - id: shopping-cart
-          uri: lb://SHOPPING-CART
+          uri: lb://shopping-cart
           predicates:
             - Path=/cart/**

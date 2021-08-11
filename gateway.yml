@@ -24,8 +24,8 @@ spring:
         - id: product-catalog
           uri: lb://product-catalog
           predicates:
-            - Path=/product/**
+            - Path=v1/product/**
         - id: shopping-cart
           uri: lb://shopping-cart
           predicates:
-            - Path=/cart/**
+            - Path=v1/cart/**
